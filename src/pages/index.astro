@@ -17,8 +17,8 @@ import '../styles/global.css';
     <span class="text-lg font-semibold text-white">Dylan Love</span>
     <ul class="flex gap-6 text-sm font-medium text-white/90 items-center">
       <li><a href="#about" class="hover:text-blue-400 transition-colors">About</a></li>
-      <li><a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a></li>
       <li><a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a></li>
+      <li><a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a></li>
       <li><a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a></li>
 
       <!-- GitHub Icon -->
@@ -46,7 +46,7 @@ import '../styles/global.css';
 
 
     <!-- Hero Panel -->
-    <section class="pt-28 px-6 flex justify-center">
+    <section id="about" class="pt-28 pb-10 px-6 flex justify-center">
 <div class="w-full max-w-6xl bg-gradient-to-br from-white/10 via-blue-500/10 to-green-500/10 backdrop-blur-md border border-white/20 rounded-xl shadow-xl p-8 flex flex-col md:flex-row items-center gap-8">
 
         <!-- Orbit + Image -->
@@ -105,6 +105,8 @@ import '../styles/global.css';
         <button onclick="document.getElementById('contact-popup').classList.add('hidden')" class="mt-2 px-4 py-2 bg-white/10 rounded-lg border border-white/20 hover:bg-white/20 transition">Close</button>
       </div>
     </div>
+
+<div class="h-12 bg-gradient-to-b from-transparent to-slate-950 w-full"></div>
 
     <!-- Experience Section (Glass Containers with Hover Highlight & Modal) -->
 <section id="experience" class="bg-slate-950 text-white pt-12 pb-24 px-8">
@@ -222,41 +224,73 @@ import '../styles/global.css';
 
 
 
-
-
-    <!-- Projects Section -->
-    <section id="projects" class="min-h-screen px-8 py-16 bg-slate-900/70">
-      <h2 class="text-4xl font-bold text-center mb-12 text-white">Projects</h2>
-      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        <a href="/projects/fitness" class="bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-          <div class="h-48 w-full bg-cover bg-center" style="background-image: url('/images/fitness.png');"></div>
-          <div class="p-6 text-left">
-            <h3 class="text-xl font-semibold text-white mb-2">Personalized Fitness Engine</h3>
-            <p class="text-gray-300 text-sm">Multi-sensor recommendation engine that clusters user behavior and tailors health plans using time-series data and Random Forests.</p>
-          </div>
-        </a>
-        <a href="/projects/chatbot" class="bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-          <div class="h-48 w-full bg-cover bg-center" style="background-image: url('/images/chatbot.png');"></div>
-          <div class="p-6 text-left">
-            <h3 class="text-xl font-semibold text-white mb-2">Subreddit Chatbot</h3>
-            <p class="text-gray-300 text-sm">A full-stack transformer chatbot trained on Reddit content, with live Hugging Face integration and dynamic Flask backend.</p>
-          </div>
-        </a>
-        <a href="/projects/vcs" class="bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-          <div class="h-48 w-full bg-cover bg-center" style="background-image: url('/images/git.png');"></div>
-          <div class="p-6 text-left">
-            <h3 class="text-xl font-semibold text-white mb-2">Git Version Control Emulator</h3>
-            <p class="text-gray-300 text-sm">Java-based emulator for Git, featuring SHA-1 commit tracking, persistent state, and intuitive file change history.</p>
-          </div>
-        </a>
+<!-- Projects Section -->
+<section id="projects" class="min-h-screen px-8 py-16 bg-slate-900/70">
+  <h2 class="text-4xl font-bold text-center mb-12 text-white">Projects</h2>
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Fitness Project -->
+    <a href="#" target="_blank" rel="noopener noreferrer" class="bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+      <div class="h-48 w-full bg-cover bg-center" style="background-image: url('/portfolio-website/fitbit.png');"></div>
+      <div class="p-6 text-left">
+        <h3 class="text-xl font-semibold text-white mb-2">Personalized Fitness Engine</h3>
+        <p class="text-gray-300 text-sm">Multi-sensor recommendation engine that clusters user behavior and tailors health plans using time-series data and Random Forests.</p>
       </div>
-    </section>
+    </a>
+
+    <!-- Chatbot Project -->
+    <a href="https://surf-chatbot-d389c8652967.herokuapp.com/" target="_blank" rel="noopener noreferrer" class="bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+      <div class="h-48 w-full bg-cover bg-center" style="background-image: url('/portfolio-website/surfchatbot.png');"></div>
+      <div class="p-6 text-left">
+        <h3 class="text-xl font-semibold text-white mb-2">Subreddit Chatbot</h3>
+        <p class="text-gray-300 text-sm">A full-stack transformer chatbot trained on Reddit content, with live Hugging Face integration and dynamic Flask backend.</p>
+      </div>
+    </a>
+
+    <!-- Git Project -->
+    <a href="https://github.com/Dlove891/git-emulator" target="_blank" rel="noopener noreferrer" class="bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+      <div class="h-48 w-full bg-cover bg-center" style="background-image: url('/portfolio-website/gitdiagram.png');"></div>
+      <div class="p-6 text-left">
+        <h3 class="text-xl font-semibold text-white mb-2">Git Version Control Emulator</h3>
+        <p class="text-gray-300 text-sm">Java-based emulator for Git, featuring SHA-1 commit tracking, persistent state, and intuitive file change history.</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+
 
     <!-- Contact Section -->
-    <section id="contact" class="min-h-screen flex flex-col items-center justify-center px-8 text-center bg-slate-950/60">
-      <h2 class="text-4xl font-bold mb-4">Get in Touch</h2>
-      <p class="max-w-xl text-gray-300 text-lg">[Placeholder] Contact details or a form could go here.</p>
-    </section>
+<section id="contact" class="min-h-screen flex flex-col items-center justify-center px-8 text-center bg-slate-950/60">
+  <h2 class="text-4xl font-bold mb-4 text-white">Get in Touch</h2>
+  <p class="max-w-xl text-gray-300 text-lg mb-6">
+    I'm always open to discussing new opportunities, side projects, or just chatting about ML, surfing, or tech. Feel free to reach out!
+  </p>
+
+  <!-- Contact Info -->
+  <div class="text-gray-300 space-y-2 text-lg mb-8">
+    <p><strong>Email:</strong> <a href="mailto:djlove@berkeley.edu" class="text-sky-400 hover:underline">djlove@berkeley.edu</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+18582438593" class="text-sky-400 hover:underline">(858) 243-8593</a></p>
+    <p>
+      <strong>Links:</strong>
+      <a href="https://github.com/Dlove891" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline">GitHub</a> |
+      <a href="https://www.linkedin.com/in/dylan-love-cal2025/" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline">LinkedIn</a>
+    </p>
+  </div>
+
+  <!-- Skills Icons (you can use a library like devicon or simple img tags) -->
+  <div class="flex flex-wrap justify-center gap-6 text-white text-3xl">
+    <i class="devicon-python-plain colored"></i>
+    <i class="devicon-java-plain colored"></i>
+    <i class="devicon-cplusplus-plain colored"></i>
+    <i class="devicon-pytorch-original colored"></i>
+    <i class="devicon-tensorflow-original colored"></i>
+    <i class="devicon-html5-plain colored"></i>
+    <i class="devicon-css3-plain colored"></i>
+    <i class="devicon-git-plain colored"></i>
+    <i class="devicon-bash-plain colored"></i>
+  </div>
+</section>
+
 
     <!-- JS: Glowing Trail -->
     <script>
